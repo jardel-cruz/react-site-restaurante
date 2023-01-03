@@ -1,6 +1,6 @@
+import styleTema from "@/assets/style/Tema.module.scss";
 import style from "./Inicio.module.scss";
 import cardapio from "../../data/cardapio.json";
-import Menu from "@/components/Munu/Menu";
 
 export default function Inicio() {
   let pratosRecomendados = [...cardapio];
@@ -10,7 +10,7 @@ export default function Inicio() {
 
   return (
     <section>
-      <h3 className={style.titulo}>Recomendações</h3>
+      <h3 className={styleTema.titulo}>Recomendações</h3>
       <div className={style.recomendados}>
         {pratosRecomendados.map(({ id, photo, title }) => (
           <div key={id}>

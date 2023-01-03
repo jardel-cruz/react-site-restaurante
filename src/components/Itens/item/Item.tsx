@@ -27,7 +27,7 @@ export function Item({
           <div
             className={classNames(
               style.item__tipo,
-              style[`item__tipo__${category.label.toLowerCase()}`]
+              style[`item__tipo__${category.label.toLowerCase() as "carnes"}`]
             )}
           >
             {category.label}
