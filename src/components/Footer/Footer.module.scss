@@ -1,0 +1,9 @@
+@import "../../assets/style/variables";
+@import "../../assets/style/breakpoints";
+
+.footer {
+  background-color: $red;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px $padding-horizontal;
+}
