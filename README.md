@@ -7,6 +7,8 @@ Ele é constituído em de três paginas
 
 ## Inicio
 
+[inicio](./README_midia/Inicio.png)
+
 ## Cardápio
 
 ## Sobre
