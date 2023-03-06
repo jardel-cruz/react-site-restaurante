@@ -57,7 +57,7 @@ framework css que facilita a escrita de componentes modulares e reutilizáveis.
 
 Com isso a parte estilização do site pode ser configurada e alterada sem dores de cabeça.
 
-## [Classnames]()
+## [Classnames](https://www.npmjs.com/package/classnames)
 
 Com essa dependência podemos definir o "className" do componente de forma dinâmica através de determinadas condições,
 assim renderizando os elementos com estilos diferentes a depender, por exemplo, da seleção feita pelo usuário.
@@ -78,11 +78,64 @@ export default function Element() {
         [style.section__secondary]: cont < 5,
       )
     }>
-      <h1>Element<h1/>
-      <p>sample element<p/>
-    <section/>
+      <h1>Element</h1>
+      <p>sample element</p>
+    </section>
   )
 }
 ```
 
 Neste caso o "className" de section será section\_\_primary.
+
+## [Typescript-plugin-css-modules](https://www.npmjs.com/package/typescript-plugin-css-modules)
+
+Essa é mais uma dependência de estilização, com ela podemos importar um arquivo css ou scss com um objeto js
+e com isso ter maior facilidade ao utilizar estilos. Exemplo:
+
+- style.module.scss
+
+```scss
+.menu {
+  padding: 20px $padding-horizontal;
+  display: flex;
+
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+}
+```
+
+- Menu.tsx
+
+```jsx
+import style from "./style.module.scss";
+
+export default function Menu() {
+  return (
+    <section className={style.menu}>
+      <ul className={style.menu__list}>
+        <li></li>
+      </ul>
+    </section>
+  );
+}
+```
+
+## [React-icons](https://www.npmjs.com/package/react-icons)
+
+O react-icons é uma biblioteca de iconic prontos para o uso, assim retirando a nescidade
+de abordagens complexas para o uso desses ícones. Exemplo:
+
+```jsx
+import { FaBeer } from "react-icons/fa";
+
+export default function Question() {
+  return (
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
+}
+```
