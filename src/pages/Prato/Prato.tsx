@@ -2,7 +2,6 @@ import style from "./Prato.module.scss";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import cardapio from "../../data/cardapio.json";
 import TagsPratos from "@/components/Tags/TagsPratos";
-import NotFound from "../NotFound/NotFound";
 
 export default function Prato() {
   const { id } = useParams();
